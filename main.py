@@ -1,16 +1,32 @@
 # This is a python script runs voice_enhancer.py and vowel_detector.py
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+import sys
+import voice_enhancer as vh
+import vowel_detector as vd
 
 
-# Press the green button in the gutter to run the script.
+def fft_processor():
+    try:
+        original_audio_file = "original.wav"
+        vowel1 = "vowel1.wav"
+        vowel2 = "vowel2.wav"
+        vh.fft_enhancer(original_audio_file)
+    except TypeError as e:
+        print(e)
+        sys.exit(1)
+    except IndexError as e:
+        print(e)
+        sys.exit(1)
+    except ValueError as e:
+        print(e)
+        sys.exit(1)
+    except NameError as e:
+        print(e)
+        sys.exit(1)
+    except KeyboardInterrupt:
+        print("\n\nProgram interrupted.")
+        sys.exit(1)
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    fft_processor()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
