@@ -2,7 +2,7 @@
 import sys
 import voice_enhancer as vh
 import vowel_detector as vd
-
+ #Hitec10T@202#IPsZon
 
 def fft_processor():
     try:
@@ -10,6 +10,8 @@ def fft_processor():
         vowel1 = "vowel1.wav"
         vowel2 = "vowel2.wav"
         vh.fft_enhancer(original_audio_file)
+
+        print("\n\nProgram completed successfully.")
     except TypeError as e:
         print(e)
         sys.exit(1)
