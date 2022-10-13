@@ -2,7 +2,9 @@
 import sys
 import voice_enhancer as vh
 import vowel_detector as vd
- #Hitec10T@202#IPsZon
+
+# Hitec10T@202#IPsZon
+
 
 def fft_processor():
     try:
