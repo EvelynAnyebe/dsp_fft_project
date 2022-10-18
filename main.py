@@ -12,6 +12,7 @@ def fft_processor():
         vowel1 = "vowel1.wav"
         vowel2 = "vowel2.wav"
         vh.fft_enhancer(original_audio_file)
+        # vd.vowel_detector(original_audio_file)
 
         print("\n\nProgram completed successfully.")
     except TypeError as e:

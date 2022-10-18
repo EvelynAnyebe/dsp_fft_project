@@ -13,11 +13,9 @@ def save_audio(filename, sample_rate, wav):
 
 
 def normalize_signal(audio_signal):
-    return np.int16((audio_signal/np.max(audio_signal)*2**15))
-
-
-def recover_audio(audio_signal):
-    return np.int16(audio_signal*(2**15/np.max(audio_signal)))
+    sig = np.int16((audio_signal/np.max(np.abs(audio_signal))*2**15))
+    #sig = audio_signal/2**15
+    return sig
 
 
 def plot_signal(x, y, scale, x_label, y_label, title, out_image):
